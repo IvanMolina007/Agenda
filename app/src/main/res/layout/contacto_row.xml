@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/imageViewRecyclerFoto"
+        android:layout_width="137dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewNombreContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="nombreContacto"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewRecyclerFoto"
+        app:layout_constraintTop_toTopOf="@+id/imageViewRecyclerFoto" />
+
+    <TextView
+        android:id="@+id/textViewTelefonoContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="telefonoContacto"
+        app:layout_constraintStart_toStartOf="@+id/textViewNombreContacto"
+        app:layout_constraintTop_toTopOf="@+id/textViewNombreContacto" />
+
+    <TextView
+        android:id="@+id/textViewDireccionContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="direccionContacto"
+        app:layout_constraintStart_toStartOf="@+id/textViewTelefonoContacto"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTelefonoContacto" />
+
+    <ImageButton
+        android:id="@+id/imageButtonLlamar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:background="#00FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewRecyclerFoto"
+        app:srcCompat="@drawable/ic_baseline_phone_24" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCorreo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:background="#00FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonLlamar"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonLlamar"
+        app:srcCompat="@drawable/ic_baseline_mail_outline_24" />
+
+    <ImageButton
+        android:id="@+id/imageButtonBorrar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:background="#00FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonCorreo"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonCorreo"
+        app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+
+    <ImageButton
+        android:id="@+id/imageButtonUp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:background="#00FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonBorrar"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonBorrar"
+        app:srcCompat="@drawable/ic_baseline_arrow_upward_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
